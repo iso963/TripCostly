@@ -1,0 +1,190 @@
+:root {
+  --primary-color: #4f46e5;
+  --primary-dark: #4338ca;
+  --text-color: #333;
+  --secondary-text-color: #666;
+  --background-color: #f8fafc;
+  --card-background: #ffffff;
+  --border-color: #e2e8f0;
+  --result-background: #eff6ff;
+  --font-family: 'Inter', sans-serif;
+  --border-radius: 8px;
+  --spacing-unit: 16px;
+}
+
+/* Inter Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: var(--font-family);
+  background: var(--background-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px; /* Slightly wider for better mobile usability */
+  margin: var(--spacing-unit);
+  background: var(--card-background);
+  padding: calc(2 * var(--spacing-unit));
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  box-sizing: border-box; /* Include padding in width */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: calc(0.5 * var(--spacing-unit));
+  color: var(--primary-color);
+  font-size: 2em;
+  font-weight: 700;
+}
+
+h2 {
+  text-align: center;
+  color: var(--secondary-text-color);
+  font-size: 1.1em;
+  margin-top: calc(-0.5 * var(--spacing-unit));
+  margin-bottom: calc(2 * var(--spacing-unit));
+  font-weight: 500;
+}
+
+label {
+  display: block;
+  margin-top: var(--spacing-unit);
+  margin-bottom: calc(0.5 * var(--spacing-unit));
+  font-weight: 600;
+  font-size: 0.9em;
+  color: var(--text-color);
+}
+
+.input-group {
+  position: relative;
+  margin-top: var(--spacing-unit);
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: calc(0.75 * var(--spacing-unit)) calc(0.75 * var(--spacing-unit)) calc(0.75 * var(--spacing-unit)) calc(2.5 * var(--spacing-unit)); /* Left padding for icon */
+  font-size: 1em;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  box-sizing: border-box;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.input-group .icon {
+  position: absolute;
+  left: calc(0.75 * var(--spacing-unit));
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--secondary-text-color);
+  pointer-events: none;
+  width: 18px;
+  height: 18px;
+}
+
+
+button {
+  width: 100%;
+  padding: calc(0.85 * var(--spacing-unit));
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  margin-top: calc(1.5 * var(--spacing-unit));
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+button:hover {
+  background: var(--primary-dark);
+}
+
+.result {
+  margin-top: calc(2 * var(--spacing-unit));
+  background: var(--result-background);
+  padding: var(--spacing-unit);
+  border-radius: var(--border-radius);
+  display: none;
+  text-align: center;
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+.result strong {
+  color: var(--primary-dark);
+  font-size: 1.2em;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.result small {
+  color: var(--secondary-text-color);
+  font-size: 0.85em;
+}
+
+.breakdown {
+  margin-top: var(--spacing-unit);
+  text-align: left;
+  border-top: 1px solid var(--border-color);
+  padding-top: var(--spacing-unit);
+}
+
+.breakdown p {
+  margin: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9em;
+}
+
+/* Monetization sections */
+.monetization-section {
+  margin-top: calc(2 * var(--spacing-unit));
+  padding: var(--spacing-unit);
+  background: #f0f4f8;
+  border-radius: var(--border-radius);
+  text-align: center;
+  font-size: 0.9em;
+  color: var(--secondary-text-color);
+}
+
+.monetization-section h3 {
+  margin-top: 0;
+  color: var(--primary-color);
+  font-size: 1.1em;
+}
+
+.monetization-section a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.monetization-section a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  margin-top: calc(2 * var(--spacing-unit));
+  text-align: center;
+  font-size: 0.8em;
+  color: var(--secondary-text-color);
+}
+
